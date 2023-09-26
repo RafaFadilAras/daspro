@@ -7,11 +7,12 @@ public class PemilihanPercobaan1 {
         int angka = input24.nextInt();
 
         if (angka % 2 == 0) {
-            System.out.println("Angka " +angka+ "Bilangan genap");
+            System.out.println("Angka " +angka+ " Bilangan genap");
         }
         else {
-            System.out.println("Angka " +angka+ "Bilangan ganjil");
+            System.out.println("Angka " +angka+ " Bilangan ganjil");
         }
         
         }
 }
+
