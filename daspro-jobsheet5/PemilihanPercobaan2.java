@@ -34,9 +34,7 @@ public class PemilihanPercobaan2 {
      } else if (total > 39) {
           predikat = "E";
      }
-
      System.out.println("Predikat nilai anda:" +predikat);
-
      }
      
 }   
