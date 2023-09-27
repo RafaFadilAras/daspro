@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class PemilihanPercobaan2 {
      public static void main(String[] args) {
-    Scanner input24 = new Scanner(System.in);
+     Scanner input24 = new Scanner(System.in);
 
      System.out.print("Nilai UAS:");
      float UAS = input24.nextFloat();
@@ -17,7 +17,7 @@ public class PemilihanPercobaan2 {
      String message = total < 65 ? "Remidi" : "Tidak Remidi";
      System.out.println("Nilai akhir = " +total+ " sehingga " +message);
 
-     String predikat;
+     String predikat="Dikeluarkan";
 
      if (total > 80 && total <= 100) {
           predikat = "A";
@@ -34,8 +34,9 @@ public class PemilihanPercobaan2 {
      } else if (total > 39) {
           predikat = "E";
      }
+
      System.out.println("Predikat nilai anda:" +predikat);
-     
+
      }
      
 }   

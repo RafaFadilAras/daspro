@@ -24,7 +24,7 @@ public class coba {
     }
 
     public static void main(String[] args) {
-        LocalDate tanggalKedaluwarsa = LocalDate.of(2023, 9, 30); // Ganti dengan tanggal kedaluwarsa yang sesuai
+        LocalDate tanggalKedaluwarsa = LocalDate.of(2023, 9, 20); // Ganti dengan tanggal kedaluwarsa yang sesuai
         coba produk = new coba("Produk teh", tanggalKedaluwarsa);
 
         System.out.println("Nama Produk: " + produk.getNama());
