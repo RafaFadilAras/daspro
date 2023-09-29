@@ -1,3 +1,11 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "java.project.sourcePaths": [
+        "daspro-jobsheet5",
+        "daspro-jobsheet4",
+        "daspro-jobsheet3",
+        "daspro-jobsheet2",
+        "daspro-jobsheet1",
+        ""
+    ]
 }
