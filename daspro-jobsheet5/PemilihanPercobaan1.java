@@ -8,7 +8,6 @@ public class PemilihanPercobaan1 {
 
         String result = (angka % 2 == 0 ) ? "Angka " +angka+ " Bilangan genap" : "Angka " +angka+ " Bilangan ganjil";
         System.out.println(result);
-        
         }
 }
 
