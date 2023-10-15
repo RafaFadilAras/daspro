@@ -7,7 +7,7 @@ public class WhileGaji24 {
     public static void main(String[] args) {
         Scanner scan = new Scanner (System.in);
         int jumlahKaryawan, jumlahJamLembur;
-        double gajiLembur=0, totalGajiLembur=0;
+        double totalGajiLembur=0;
         String jabatan;
 
         System.out.println("Masukkan jumlah karyawan : ");
@@ -18,19 +18,23 @@ public class WhileGaji24 {
             System.out.println("Pilihan jabatan - Direktur, Manajer, Karyawan");
             System.out.println("Masukkan jabatan karyawan ke- " + (i+1) + ":");
             jabatan = scan.next();
+
+            if (!(jabatan.equalsIgnoreCase("direktur") || jabatan.equalsIgnoreCase("manajer") || jabatan.equalsIgnoreCase("karyawan"))) {
+                System.out.println("Jabatan tidak valid. Pilih dari opsi yang tersedia.");
+                continue;
+            }
             System.out.println("Masukkan jumlah jam lembur :");
             jumlahJamLembur = scan.nextInt();
-            i++;
-            if (jabatan.equalsIgnoreCase("Direktur")) {
-                continue;
-            } else if (jabatan.equalsIgnoreCase("manajer")) {
+
+            double gajiLembur=0;
+            if (jabatan.equalsIgnoreCase("manajer")) {
                 gajiLembur = jumlahJamLembur * 100000;
-            }
-            else if (jabatan.equalsIgnoreCase("karyawan")) {
+            } else if (jabatan.equalsIgnoreCase("karyawan")) {
                 gajiLembur = jumlahJamLembur * 75000;
             }
             totalGajiLembur += gajiLembur;
-            System.out.println("Total Gaji Lembur : " +totalGajiLembur);
+            i++;
         }
+        System.out.println("Total Gaji Lembur : " +totalGajiLembur);
     }
 }
