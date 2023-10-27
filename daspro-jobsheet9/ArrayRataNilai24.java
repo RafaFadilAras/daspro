@@ -14,7 +14,14 @@ public class ArrayRataNilai24 {
     for (int i = 0; i < nilaiMhs.length; i++) {
         total += nilaiMhs [i];
     }
+    int totalLulus = 0;
+    for (int i=0; i < nilaiMhs.length; i++) {
+        if (nilaiMhs[i]>70) {
+            totalLulus++;
+        }
+    }
     rata2 = total/nilaiMhs.length;
     System.out.println("rata-rata nilai = " +rata2);
+    System.out.println("Banyaknya mahasiswa yang lulus : " +totalLulus);
     }
 }
