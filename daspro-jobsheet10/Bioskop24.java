@@ -17,7 +17,6 @@ public class Bioskop24 {
         System.out.println(penonton.length);
         for (int j=0; j<penonton.length; j++) {
             System.out.println("Penonton pada baris ke-" + (j+1) + ":" +String.join (",",penonton[j]));
-        
         }
     }
 }
