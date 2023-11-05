@@ -7,7 +7,7 @@ public class BioskopWithScanner24 {
         String [] [] penonton = new String [4][2];
         while (true) {
 
-            System.out.println("---  Menu  ---");
+            System.out.println("Menu");
             System.out.println("1. Input data penonton");
             System.out.println("2. Tampilkan daftar penonton");
             System.out.println("3. Exit\n");
@@ -21,16 +21,30 @@ public class BioskopWithScanner24 {
                     baris = sc.nextInt();
                     System.out.print("Masukkan kolom : ");
                     kolom = sc.nextInt();
-                    penonton[baris-1][kolom-1] = nama;
-                    System.out.print("Input penonton lainnya? (y/n) : ");
-                    next = sc.next();
+
+                    for (int i=0; i < penonton.length; i++) {
+                        for (int j=0; j<penonton[i].length; j++) {
+                            penonton[i][j] = "****";
+                        }
+                    }
+
+                    if (baris > penonton.length || kolom > penonton[baris-1].length) {
+                        System.out.println("kursi tidak tersedia");
+                        continue;
+                    } else if (penonton[baris-1][kolom-1]!=null) {
+                        System.out.println("Kursi sudah terisi oleh penonton lain!");
+                        continue;
+                    } else {
+                        penonton[baris-1][kolom-1] = nama;
+                        System.out.print("Input penonton lainnya? (y/n) : ");
+                        next = sc.next();
+                     }
                     if (next.equalsIgnoreCase("n")) {
                         System.out.println("");
                         break;
                     }
                 }
             }
-
             if (menu==2) {
                 System.out.println("");
                 for (int i = 0; i < penonton.length; i++) {
@@ -41,12 +55,10 @@ public class BioskopWithScanner24 {
                     System.out.println("");
                 }
             }
-
             if (menu==3) {
                 break;
             }
-
         }
-
     }
 }
+
