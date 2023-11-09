@@ -9,13 +9,19 @@ public class Quiz24 {
             int number = random.nextInt(10)+1;
             boolean success = false;
             do {
-                 System.out.println("Tebak angka (1-10) : ");
+                System.out.println("Tebak angka (1-10) : ");
                 int answer = input.nextInt();
                 input.nextLine();
+                if (answer > number) {
+                    System.out.println("Lebih kecil dari ");
+                } else if (answer < number) {
+                    System.out.println("Lebih besar dari ");
+                }
                 success = (answer==number);
             } while (!success);
             System.out.println("Apakah anda ingin mengulang permainan (Y/y)?");
             menu = input.nextLine().charAt(0);
         } while (menu=='y' || menu=='Y');
+        System.out.println("Terima kasih sudah bermain");
     }
 }
