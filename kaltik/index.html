@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Kalkulator Matematik </title>
+</head>
+<body>
+  <div class="calculator">
+    <h1>Katik |Kalkulator Matematik|</h1>
+    <h2>Welcome to katik ^^ </h2>
+    <h3>Hitung Luas & Keliling Persegi</h3>
+
+    <!-- Input untuk panjang sisi -->
+    <label for="sideLength">Panjang Sisi : </label>
+    <input type="number" id="sideLength" placeholder="Masukkan panjang sisi">
+
+    <!-- Radio button untuk memilih menghitung luas atau keliling -->
+    <label>
+      <input type="radio" name="calculationType" value="luas" checked> Hitung Luas
+    </label>
+    <label>
+      <input type="radio" name="calculationType" value="keliling"> Hitung Keliling
+    </label>
+
+    <button onclick="calculate()">Hitung</button>
+
+    <!-- Tombol reset -->
+    <button onclick="reset()">Reset</button>
+
+    <!-- Elemen <div> untuk menampilkan hasil perhitungan -->
+    <div id="result"></div>
+    
+  </div>
+
+  <!-- Menambahkan elemen <script> untuk file JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
